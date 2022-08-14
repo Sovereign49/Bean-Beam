@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Materials/saber-blue.tres" type="Material" id=1]
+[ext_resource path="res://Assets/Materials/Gold.tres" type="Material" id=2]
+[ext_resource path="res://Assets/Materials/Bronze.tres" type="Material" id=3]
+[ext_resource path="res://Assets/Models/lightsaber.dae" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Materials/Steel.tres" type="Material" id=5]
+
+[node name="lightsaber" instance=ExtResource( 4 )]
+
+[node name="Cylinder" parent="." index="1"]
+material/0 = ExtResource( 5 )
+material/1 = ExtResource( 2 )
+
+[node name="Cylinder001" parent="." index="2"]
+material/0 = ExtResource( 3 )
+
+[node name="Cylinder002" parent="." index="3"]
+material/0 = ExtResource( 5 )
+
+[node name="Cylinder003" parent="." index="4"]
+material/0 = ExtResource( 5 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="." index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.366712, 0 )
+use_in_baked_light = true
+radius = 0.014
+height = 0.5
+material = ExtResource( 1 )
